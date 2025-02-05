@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Story of my life</title>
+    <link rel="icon" href="Pictures\CTU_new_logo.png" type="image/png">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    
+    <header>
+        <div class="nav-left-side">
+            <div class="logo-svg">
+                <svg viewBox="0 0 60 100" width="1.5rem" height="2.5rem"> <!-- Form J letter -->
+                    <path d="M30,5 l25,0 -10,0 0,75 c0,15 -30,15 -30,-10" fill="none" stroke="white" stroke-width="8"/>
+                </svg>
+                <svg viewBox="0 0 80 100" width="1.5rem" height="2.5rem"> <!-- Form D letter -->
+                    <path d="M10,-10 C100,10 100,100 10,100z" fill="none" stroke="white" stroke-width="10"/>
+                </svg>
+            </div>
+            <div class="nav-title">Articles</div>
+        </div>
+        <div class="expand-btn" onclick="toggleHeader()">Close</div>
+        <nav class="nav-links">
+            <a href="#" id="homeLink">Home</a>
+            <a href="#" id="articleLink">Article</a>
+            <a href="#" id="aboutLink">About</a>
+            <a href="#" id="loginBtn">Log-in</a>
+        </nav>
+    </header>    
+
+    <div class="section" id="homeSection">
+        <img src="Pictures\Entrance.jpg" alt="Entrance" />
+        <div class="left-side-home">
+            <h1>Story of my life.</h1>
+            <p>Jayrald John C. Dalman</p>
+            <p>BSCpE 3 Day</p>
+        </div>
+    </div>
+
+    <div class="section" id="articleSection" style="display: none;">
+        
+        <div class="page-title">Story of my life</div>
+        <div class="image-grid">
+
+            <div class="image-section">
+                <img src="Pictures\anime chid boi.jpg" style="width: 300px" alt="Picture 1">
+                <div class="text-content">
+                    <div class="title">Childhood and Early Empathy</div>
+                    <div class="description">
+                        When I was a child, I was born an introvert, but I cared deeply about people. Whenever I saw someone crying, I would give them my sticker collection to cheer them up, which showed my empathy toward those who were sad. During elementary school, I consistently placed between the top 2 to 4 in my class, and I really liked the education system back then. 
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-section">
+                <img src="Pictures\kousei.webp" alt="Picture 2">
+                <div class="text-content">
+                    <div class="title">High School Life and Social Struggles</div>
+                    <div class="description">
+                        When I passed the entrance exam for SciTech, I felt sad that some of my classmates didn’t make it. Honestly, I never really liked being around people who were much smarter than me (though I didn’t envy them). I preferred being with those who weren’t too academically gifted and wanted me to tutor them. However, my lack of communication skills made this difficult. Even though I had a group of friends, I often felt like nobody. I also struggled to find a partner for group activities, but thankfully, things eventually worked out.
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-section">
+                <img src="Pictures\career path.jpg" alt="Picture 3">
+                <div class="text-content">
+                    <div class="title">Choosing a Career Path</div>
+                    <div class="description">
+                        During my senior high school years, I struggled to find the right course for me. I dreamed of becoming a game developer, so I looked for a course closely related to that field. I discovered that Computer Science would be the most suitable choice, but unfortunately, CTU didn’t offer that course. Studying at other schools like CIT was also challenging due to tuition fees. Because of this, I chose Computer Engineering at CTU, as it includes Computer Science subjects and could still lead me to a game development career. I knew I would struggle with hardware and electrical subjects, but I was determined to do my best.  
+                    </div>
+                </div>
+            </div>
+
+            <div class="image-section">
+                <img src="Pictures\future.avif" style="width: 400px" alt="Picture 4">
+                <div class="text-content">
+                    <div class="title">Uncertainty About the Future</div>
+                    <div class="description">
+                        I don’t know what the future holds—whether I will become a game developer or not. There is also uncertainty in our third year regarding whether we will continue with engineering in our fourth year or become irregular students if we transfer to another school. However, I remain hopeful that everything will work out in the end.  
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="section" id="aboutSection" style="display: none;">
+        <div class="y-center">
+            <h1>About "Story of my life"</h1>
+            <p>This article is a space where personal experiences, thoughts, and moments are shared. It's about telling stories—whether real or imagined—that reflect emotions, lessons, and memories. This section gives a glimpse into different journeys, allowing readers to connect, relate, or simply enjoy a good story.</p>
+        </div>
+    </div>
+    
+    <footer>
+        <i>This page was created by Jayrald John Dalman</i>
+    </footer>
+
+    <div id="modal" class="modal">
+        <span id="closeImg" class="close">&times;</span> <!-- Display X at the top right -->
+        <img class="modal-content-in-img" id="modalImg">
+        <div class="modal-caption" id="caption"></div> 
+    </div>
+
+    <div id="loginModal" class="modal">
+        <div class="modal-content-in-form">
+            <span id="closeLogin" class="close">&times;</span>
+            <h2>Log-in</h2>
+            <form>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Log-in</button>
+            </form>
+            <p>Don't have an account? <a href="#" id="signupLink">Sign-up here</a></p>
+        </div>
+    </div>
+
+    <div id="signupModal" class="modal">
+        <div class="modal-content-in-form">
+            <span id="closeSignup" class="close">&times;</span>
+            <h2>Sign-up</h2>
+            <form>
+                <label for="signupEmail">Email:</label>
+                <input type="email" id="signupEmail" name="signupEmail" required>
+                <label for="signupPassword">Password:</label>
+                <input type="password" id="signupPassword" name="signupPassword" required>
+                <label for="confirmPassword">Confirm Password:</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" required>
+                <button type="submit">Sign-up</button>
+            </form>
+        </div>
+    </div>
+
+</body>
+</html>
