@@ -175,10 +175,13 @@ header {
 
 .image-section:nth-child(odd) {
     flex-direction: row; 
+    text-align: justify;
 }
 
 .image-section:nth-child(even) {
     flex-direction: row-reverse; 
+    text-align: justify;
+    text-align-last: right;
 }
 
 .image-section img {
@@ -195,21 +198,12 @@ header {
     gap: 20px;
 }
 
-.image-section:nth-child(odd) {
-    text-align: justify;
-}
-
-.image-section:nth-child(even) {
-    text-align: justify;
-    text-align-last: right;
-}
-
 .image-section:nth-child(even) .title {
     text-align: right;
 }
 
-
 .title {
+    color: rgb(255, 255, 190);
     font-weight: bold;
     font-size: 3rem; 
     margin-bottom: 30px;
@@ -473,14 +467,20 @@ header.expanded {
         font-size: 1.1rem; 
     }
 
-    .image-section {
-        display: flex;
+    .image-section:nth-child(odd) {
         flex-direction: column; 
-        justify-content: flex-end;
-        padding: 20px;
-        margin-bottom: 20px;
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #fff;
+        text-align: center;
+    }
+    
+    .image-section:nth-child(even) {
+        flex-direction: column; 
+        text-align: center;
+        text-align-last: auto;
+    }
+
+    .image-section:nth-child(even) .title {
+        text-align: center;
+        text-align-last: auto;
     }
 
     .image-section img {
@@ -497,9 +497,9 @@ header.expanded {
     }
 
     .title {
+
         font-weight: bold;
         font-size: 2rem;
-        text-decoration: underline;
     }
 
     .description {
