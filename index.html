@@ -29,19 +29,19 @@
         </div>
         <div class="expand-btn" onclick="toggleHeader()">Close</div>
         <nav class="nav-links">
-            <a href="#" id="homeLink">Home</a>
+            <a href="#" id="homeLink"><i class="fa-solid fa-house"></i>Home</a>
 
             <div class="dropdown">
-                <a href="#" id="articleLink">Article</a>
+                <a href="#" id="articleLink"><i class="fa-solid fa-book"></i>Article</a>
                 <div class="dropdown-content">
                     <a href="#" id="myLifeLink" class="dropdown-item">My Life</a>
                     <a href="#" id="life2024Link" class="dropdown-item"
-                        onclick="window.open('https://raw.githack.com/Dalmanski/2D-top-view-game-on-HTML.-CSS-and-JS/main/myLife2024/index.html', '_self')">2024</a>
+                        onclick="window.open('2024\\index.html', '_self')">2024</a>
                 </div>
             </div>
 
-            <a href="#" id="aboutLink">About</a>
-            <a href="#" id="loginBtn">Log-in</a>
+            <a href="#" id="aboutLink"><i class="fas fa-info-circle"></i>About</a>
+            <a href="#" id="loginBtn"><i class="fa-solid fa-arrow-right-to-bracket"></i>Log-in</a>
         </nav>
 
     </header>
@@ -60,62 +60,88 @@
         <div class="page-title">Story of my life</div>
         <div class="image-grid">
 
-            <div class="image-section">
-                <img src="Pictures\anime chid boi.jpg" style="width: 300px" alt="Picture 1">
-                <div class="text-content">
-                    <div class="title">Childhood and Early Empathy</div>
-                    <div class="description">
-                        My name is Jayrald John C. Dalman, I am 21 years old, and I live in Maslog, Danao City. When I
-                        was a child, I was an introvert, but I cared deeply about people. Whenever I saw someone crying,
-                        I would give them my sticker collection to cheer them up, which showed my empathy toward those
-                        who were sad. During elementary school, I consistently ranked between the top 2 and 4 in my
-                        class, and I really liked the education system back then.
-                    </div>
+            <div class="h-design">My 2024 Gallery</div>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="Pictures/anjo world.jpg" alt="Anjo World">
+                    <p>Anjo World</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="Pictures/bollywood.jpg" alt="Bollywood">
+                    <p>Bollywood</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="Pictures/competition.jpg" alt="Competition">
+                    <p>Competition</p>
+                </div>
+                <div class="gallery-item">
+                    <img src="Pictures/tarsier.jpg" alt="Tarsier">
+                    <p>Tarsier</p>
                 </div>
             </div>
+            <div class="h-design">My History</div>
 
-            <div class="image-section">
-                <img src="Pictures\kousei.webp" alt="Picture 2">
-                <div class="text-content">
-                    <div class="title">High School Life and Social Struggles</div>
-                    <div class="description">
-                        When I passed the entrance exam for SciTech, I felt sad that some of my classmates didn’t make
-                        it. Honestly, I never really liked being around people who were much smarter than me (though I
-                        didn’t envy them). I preferred being with those who weren’t too academically gifted and wanted
-                        me to tutor them. However, my lack of communication skills made this difficult. Even though I
-                        had a group of friends, I often felt like nobody. I also struggled to find a partner for group
-                        activities, but thankfully, things eventually worked out.
+            <div class="image-grid-2">
+
+                <div class="image-section">      
+                    <div class="text-content">
+                        <div class="title">Childhood and Early Empathy</div>
+                        <div class="description">
+                            <img src="Pictures\anime chid boi.jpg" style="width: 300px" alt="Picture 1">
+                            My name is Jayrald John C. Dalman, I am 21 years old, and I live in Maslog, Danao City. When
+                            I was a child, I was an introvert, but I cared deeply about people. Whenever I saw someone
+                            crying, I would give them my sticker collection to cheer them up, which showed my empathy
+                            toward those who were sad. During elementary school, I consistently ranked between the top 2
+                            and 4 in my class, and I really liked the education system back then.
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="image-section">
-                <img src="Pictures\career path.jpg" alt="Picture 3">
-                <div class="text-content">
-                    <div class="title">Choosing a Career Path</div>
-                    <div class="description">
-                        During my senior high school years, I struggled to find the right course for me. I dreamed of
-                        becoming a game developer, so I looked for a course closely related to that field. I discovered
-                        that Computer Science would be the most suitable choice, but unfortunately, CTU didn’t offer
-                        that course. Studying at other schools like CIT was also challenging due to tuition fees.
-                        Because of this, I chose Computer Engineering at CTU, as it includes Computer Science subjects
-                        and could still lead me to a game development career. I knew I would struggle with hardware and
-                        electrical subjects, but I was determined to do my best.
+                <div class="image-section">
+
+                    <div class="text-content">
+                        <div class="title">High School Life and Social Struggles</div>
+                        <div class="description">
+                            <img src="Pictures\kousei.webp" alt="Picture 2">
+                            When I passed the entrance exam for SciTech, I felt sad that some of my classmates didn’t
+                            make it. Honestly, I never really liked being around people who were much smarter than me
+                            (though I didn’t envy them). I preferred being with those who weren’t too academically
+                            gifted and wanted me to tutor them. However, my lack of communication skills made this
+                            difficult. Even though I had a group of friends, I often felt like nobody. I also struggled
+                            to find a partner for group activities, but thankfully, things eventually worked out.
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="image-section">
-                <img src="Pictures\future.avif" style="width: 400px" alt="Picture 4">
-                <div class="text-content">
-                    <div class="title">Uncertainty About the Future</div>
-                    <div class="description">
-                        I don’t know what the future holds—whether I will become a game developer or not. There is also
-                        uncertainty in our third year regarding whether we will continue with engineering in our fourth
-                        year or become irregular students if we transfer to another school. However, I remain hopeful
-                        that everything will work out in the end.
+                <div class="image-section">
+                    <div class="text-content">
+                        <div class="title">Choosing a Career Path</div>
+                        <div class="description">
+                            <img src="Pictures\career path.jpg" alt="Picture 3">
+                            During my senior high school years, I struggled to find the right course for me. I dreamed
+                            of becoming a game developer, so I looked for a course closely related to that field. I
+                            discovered that Computer Science would be the most suitable choice, but unfortunately, CTU
+                            didn’t offer that course. Studying at other schools like CIT was also challenging due to
+                            tuition fees. Because of this, I chose Computer Engineering at CTU, as it includes Computer
+                            Science subjects and could still lead me to a game development career. I knew I would
+                            struggle with hardware and electrical subjects, but I was determined to do my best.
+                        </div>
                     </div>
                 </div>
+
+                <div class="image-section">
+                    <div class="text-content">
+                        <div class="title">Uncertainty About the Future</div>
+                        <div class="description">
+                            <img src="Pictures\future.avif" style="width: 400px" alt="Picture 4">
+                            I don’t know what the future holds—whether I will become a game developer or not. There is
+                            also uncertainty in our third year regarding whether we will continue with engineering in
+                            our fourth year or become irregular students if we transfer to another school. However, I
+                            remain hopeful that everything will work out in the end.
+                        </div>
+                    </div>
+                </div>
+
             </div>
 
         </div>
@@ -131,7 +157,7 @@
     </div>
 
     <footer>
-        <i>This page was created by Jayrald John Dalman</i>
+        <i>@2025 All Rights Reserved.</i>
     </footer>
 
     <div id="modal" class="modal">
