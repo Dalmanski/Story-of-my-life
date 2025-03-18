@@ -2,7 +2,7 @@ body {
     font-family: 'Chakra Petch', Arial, sans-serif;
     margin: 0;
     padding: 0;
-    color: white;
+    color: rgb(221, 221, 221);
     position: relative;
     min-height: 100vh;
     overflow-x: hidden;
@@ -19,9 +19,6 @@ body::before {
     background-image: url("Pictures\\bg gif.gif");
     background-size: cover;
     background-position: center;
-    transform: scaleX(-1);
-    /* Flip the background horizontally */
-    filter: blur(4px);
     z-index: -1;
 }
 
@@ -33,7 +30,7 @@ header {
     padding: 10px;
     background-color: rgba(0, 0, 0, 0.7);
     border-bottom: 2px solid transparent;
-    border-image: radial-gradient(circle, white 0%, rgba(255, 255, 255, 0) 100%);
+    border-image: radial-gradient(circle, currentcolor 0%, rgba(255, 255, 255, 0) 100%);
     border-image-slice: 1;
     position: fixed;
     top: 0;
@@ -53,6 +50,7 @@ header {
 }
 
 .logo-svg {
+    stroke: currentcolor;
     display: flex;
     align-items: center;
 }
@@ -61,13 +59,13 @@ header {
     margin-left: 10px;
     font-size: 1.5rem;
     text-decoration: underline;
-    color: white;
+    color: currentcolor;
     margin-top: 5px;
     margin-bottom: 5px;
 }
 
 .nav-links {
-    display: flex;
+    display: inline-block;
     gap: 20px;
     align-items: center;
     white-space: nowrap;
@@ -75,7 +73,8 @@ header {
 }
 
 .nav-links a {
-    color: white;
+    font-weight: bold;
+    color: currentcolor;
     border-radius: 10px;
     text-decoration: none;
     padding: 10px;
@@ -115,9 +114,9 @@ header {
 .left-side-home {
     position: relative;
     z-index: 1;
-    color: white;
-    background: rgba(30, 30, 30, 0.6);
-    box-shadow: 100px 0px 50px rgba(30, 30, 30, 0.6);
+    color: currentcolor;
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 100px 0px 100px rgba(0, 0, 0, 0.6);
     padding: 20px;
     max-width: 35%;
     display: flex;
@@ -157,28 +156,37 @@ header {
 #myLifeSection {
     max-width: 1400px;
     margin: 20px auto;
-    padding: 10px;
+    padding: 20px;
     margin-top: 60px;
     margin-bottom: 60px;
+    background-color: rgba(0, 0, 0, 0.75);
+    border-left: 2px solid currentcolor;
+    border-right: 2px solid currentcolor;
+    box-shadow: -3px -1px 25px 15px rgba(0,0,0,0.84);
 }
 
 .h-design {
     font-size: 24px;
-    font-weight: bold;
+    font-weight: bolder;
     text-align: center;
     margin-bottom: 15px;
 }
 
 .gallery-grid {
-    display: grid;
-    background: linear-gradient(135deg, rgba(5, 5, 5, 0.95), rgba(20, 20, 20, 0.95));
+    display: flex;
+    background: linear-gradient(135deg, black 50%, rgba(64, 64, 64, 0.5), rgba(160, 160, 160, 0.5));
     border-radius: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 15px;
     padding: 20px;
     justify-items: center;
     margin-bottom: 20px;
-    border: 1px solid white;
+    border: 1px solid currentcolor;
+     /* Make it scrollable */
+     overflow-x: auto;
+     white-space: nowrap;
+     flex-wrap: nowrap;
+     scroll-behavior: smooth;
+     box-shadow: -3px -1px 25px 15px rgba(0,0,0,0.84);
 }
 
 .gallery-item {
@@ -188,29 +196,27 @@ header {
 .gallery-item img {
     width: 300px;
     max-width: 300px;
-    height: 200px;
+    height: 250px;
     object-fit: cover;
     border-radius: 8px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease-in-out;
-}
-
-.gallery-item img:hover {
-    transform: scale(1.05);
 }
 
 .gallery-item p {
     margin-top: 5px;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: bold;
+    border-top: 1px solid currentcolor;
+    padding-top: 10px;
 }
 
 .page-title {
     text-transform: uppercase;
     text-align: center;
-    color: white;
+    color: currentcolor;
     padding: 30px;
-    font-size: 2.5rem;
+    font-size: 3rem;
+    font-weight: bold;
     letter-spacing: 2px;
     text-shadow: 2px 2px 5px black;
 }
@@ -226,13 +232,13 @@ header {
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 20px;
-    background: linear-gradient(135deg, rgba(10, 10, 10, 0.9), rgba(30, 30, 30, 0.9));
     color: #fff;
-    border: 1px solid white;
+    border: 1px solid currentcolor;
     width: 100%;
     text-align: justify;
     box-sizing: border-box; /* Prevent overflow */
     clear: both; /* Prevent float overlap */
+    box-shadow: -3px -1px 25px 15px rgba(0,0,0,0.84);
 }
 
 .image-section img {
@@ -240,6 +246,14 @@ header {
     height: 200px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
     border-radius: 10px;
+}
+
+.image-section:nth-child(odd) {
+    background: linear-gradient(225deg, black, rgba(10, 10, 10, 0.9), rgba(70, 70, 70, 0.9));
+}
+
+.image-section:nth-child(even) {
+    background: linear-gradient(135deg, black, rgba(10, 10, 10, 0.9), rgba(70, 70, 70, 0.9));
 }
 
 .image-section:nth-child(odd) img {
@@ -299,12 +313,12 @@ header {
     margin: 100px auto;
     padding: 20px;
     background-color: rgba(0, 0, 0, 0.8);
-    border: 2px solid white;
+    border: 2px solid currentcolor;
     border-radius: 10px;
 }
 
 .modal-content-in-form h2 {
-    color: white;
+    color: currentcolor;
     text-align: center;
     margin-bottom: 20px;
 }
@@ -316,23 +330,23 @@ header {
 
 .modal-content-in-form label {
     margin-bottom: 5px;
-    color: white;
+    color: currentcolor;
     text-align: left;
 }
 
 .modal-content-in-form input {
     padding: 10px;
     margin: 10px 0;
-    border: 2px solid white;
+    border: 2px solid currentcolor;
     border-radius: 5px;
     background-color: transparent;
-    color: white;
+    color: currentcolor;
     outline: none;
 }
 
 .modal-content-in-form button {
     padding: 10px;
-    background-color: white;
+    background-color: currentcolor;
     color: black;
     font-size: 1rem;
     font-weight: bold;
@@ -349,7 +363,7 @@ header {
 
 /* Signup link style */
 a#signupLink {
-    color: white;
+    color: currentcolor;
     cursor: pointer;
     text-decoration: none;
 }
@@ -361,7 +375,7 @@ a#signupLink:hover {
 label {
     display: block;
     margin: 10px 0 5px 0;
-    color: white;
+    color: currentcolor;
 }
 
 /* Close button (X) Styles */
@@ -369,7 +383,7 @@ label {
     position: absolute;
     top: 15px;
     right: 35px;
-    color: white;
+    color: currentcolor;
     font-size: 40px;
     font-weight: bold;
     cursor: pointer;
@@ -379,7 +393,7 @@ label {
 footer {
     text-align: center;
     padding: 10px;
-    color: rgba(255, 255, 255, 0.5);
+    color: currentcolor;
     margin-top: 20px;
     position: fixed;
     bottom: 0;
@@ -388,7 +402,7 @@ footer {
     z-index: 1000;
     background-color: rgba(0, 0, 0, 0.7);
     border-top: 2px solid transparent;
-    border-image: radial-gradient(circle, white 0%, rgba(255, 255, 255, 0) 100%);
+    border-image: radial-gradient(circle, currentcolor 0%, rgba(255, 255, 255, 0) 100%);
     border-image-slice: 1;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
@@ -410,7 +424,7 @@ header.expanded {
     position: absolute;
     right: 50px;
     top: 10px;
-    color: white;
+    color: currentcolor;
     background-color: transparent;
     border: none;
     cursor: pointer;
@@ -442,7 +456,7 @@ header.expanded {
 .dropdown-item {
     display: block;
     padding: 8px 12px;
-    color: white;
+    color: currentcolor;
     text-decoration: none;
     font-size: 14px;
 }
@@ -455,6 +469,23 @@ header.expanded {
     opacity: 1;
     visibility: visible;
     transform: translateX(-25px) translateY(0);
+}
+
+.section {
+    display: none;
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+}
+
+.fade-slide-right {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
+}
+
+.fade-slide-left {
+    opacity: 0 !important;
+    transform: translateX(-50px) !important;
 }
 
 /* For adjust in mobile */
@@ -489,7 +520,7 @@ header.expanded {
         padding: 15px;
         text-align: center;
         max-width: 100%;
-        border-right: 2px solid white;
+        border-right: 2px solid currentcolor;
     }
 
     .left-side-home h1 {

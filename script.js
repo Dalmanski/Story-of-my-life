@@ -75,28 +75,34 @@ function toggleHeader() {
 document.addEventListener("DOMContentLoaded", () => {
     const homeLink = document.getElementById('homeLink');
     const myLifeLink = document.getElementById('myLifeLink');
-    // const life2024Link = document.getElementById('life2024Link');
     const aboutLink = document.getElementById('aboutLink');
+    let activeSection = document.getElementById('homeSection'); 
 
-    const homeSection = document.getElementById('homeSection');
-    const myLifeSection = document.getElementById('myLifeSection');
-    // const life2024Section = document.getElementById('life2024Section');
-    const aboutSection = document.getElementById('aboutSection');
+    function showSection(newSection) {
+        if (activeSection === newSection) return; // Prevent redundant clicks
 
-    // Function to show a specific section and hide others
-    function showSection(sectionToShow) {
-        homeSection.style.display = 'none';
-        myLifeSection.style.display = 'none';
-        // life2024Section.style.display = 'none';
-        aboutSection.style.display = 'none';
+        activeSection.classList.remove('fade-slide-right');
+        activeSection.classList.add('fade-slide-left');
 
-        sectionToShow.style.display = 'block';
+        setTimeout(() => {
+            activeSection.style.display = 'none';
+            activeSection.classList.remove('fade-slide-left');
+
+            newSection.style.display = 'block';
+            setTimeout(() => {
+                newSection.classList.add('fade-slide-right');
+            }, 10);
+
+            activeSection = newSection; 
+        }, 500); 
     }
 
-    homeLink.addEventListener('click', () => showSection(homeSection));
-    myLifeLink.addEventListener('click', () => showSection(myLifeSection));
-    // life2024Link.addEventListener('click', () => showSection(life2024Section));
-    aboutLink.addEventListener('click', () => showSection(aboutSection));
+    homeLink.addEventListener('click', () => showSection(document.getElementById('homeSection')));
+    myLifeLink.addEventListener('click', () => showSection(document.getElementById('myLifeSection')));
+    aboutLink.addEventListener('click', () => showSection(document.getElementById('aboutSection')));
 
-    showSection(homeSection);
+    activeSection.style.display = 'block';
+    setTimeout(() => {
+        activeSection.classList.add('fade-slide-right');
+    }, 10);
 });
